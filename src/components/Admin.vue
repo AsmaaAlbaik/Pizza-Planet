@@ -62,10 +62,27 @@
 import AppNewPizza from './NewPizza';
 import AppLogin from './login';
 export default {
+  data() {
+    return {
+      name: 'Asmaa'
+    }
+  },
   components: {
     AppNewPizza,
     AppLogin
-  }
+  },
+  beforeRouteLeave: (to, from, next) => {
+    if (confirm('Do you logout first?!!')) {
+      next();
+    } else {
+      next(false);
+    }
+  },
+  // beforeRouteEnter: (to, from, next) => {
+  //   next(vm => {
+  //     alert('Hi '+ vm.name);
+  //   });
+  // },
 }
 </script>
 

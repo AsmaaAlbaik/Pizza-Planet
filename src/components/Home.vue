@@ -4,11 +4,20 @@
       <div class="background">
         <h1>welcome to Pizze planet</h1>
         <h2>Feeling Hungry ?</h2>
-        <button class="btn btn-success">Let's Order!</button>
+        <button class="btn btn-success" @click="goToMenu()">Let's Order!</button>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    goToMenu(){
+      this.$router.push({name: 'menuLink'});
+    }
+  }
+}
+</script>
 <style lang="scss">
   #home {
     background: url('../../src/assets/img/pizza.jpg');

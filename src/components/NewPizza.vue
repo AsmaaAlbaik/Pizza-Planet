@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="form-group row">
-      <button type="button" class="btn btn-success btn-block" @click="AddMenuItem()">Add</button>
+      <button type="button" class="btn btn-success btn-block" @click="AddMenuItem">Add</button>
     </div>
   </form>
 </template>
