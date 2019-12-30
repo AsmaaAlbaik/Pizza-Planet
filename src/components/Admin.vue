@@ -50,15 +50,21 @@
       </table>
     </div>
   </div>
-
+  <div class="row">
+    <div class="col-sm-12 col-lg-6">
+      <app-login></app-login>
+    </div>
+  </div>
 </div>
 
 </template>
 <script>
 import AppNewPizza from './NewPizza';
+import AppLogin from './login';
 export default {
   components: {
-    AppNewPizza
+    AppNewPizza,
+    AppLogin
   }
 }
 </script>

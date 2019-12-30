@@ -1,5 +1,6 @@
 <template>
   <form class="form">
+    <h3>Add New Pizza</h3>
     <div class="form-group row">
       <label class="col-sm-3">Name</label>
       <div class="col-sm-9">
@@ -45,6 +46,8 @@
 </template>
 
 <script>
+import { dbMenuRef } from '../../firebaseConfig';
+
 export default {
   data() {
     return {
@@ -67,8 +70,7 @@ export default {
   },
   methods: {
     AddMenuItem(){
-      this.newPizza;
-      console.log(this.newPizza)
+      dbMenuRef.push(this.newPizza);
     }
   }
 }
