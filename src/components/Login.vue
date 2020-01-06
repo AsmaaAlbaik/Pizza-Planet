@@ -1,7 +1,8 @@
 <template>
   <form class="form">
     <div>
-      {{ currentUser }}
+      <p v-if="!currentUser">please login to continue</p>
+      <p v-else> you are login as: {{ currentUser }} </p>
     </div>
     <div class="form-group">
       <label>Email</label>
