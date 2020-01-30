@@ -95,7 +95,24 @@ export default {
     // }
   },
   methods: {
+  //  async addToBasket(item, option) {
+  //    const pizzaExists = await this.Basket.find (
+  //      pizza => pizza.name === item.name && pizza.size === option.size
+  //    )
+  //    if (pizzaExists) {
+  //      pizzaExists.quantity++;
+  //      return;
+  //     //  to prevent push to array
+  //    }
     addToBasket(item, option) {
+     const pizzaExists = this.Basket.find (
+       pizza => pizza.name === item.name && pizza.size === option.size
+     )
+     if (pizzaExists) {
+       pizzaExists.quantity++;
+       return;
+      //  to prevent push to array
+     }
       this.Basket.push({
         name: item.name,
         size: option.size,
